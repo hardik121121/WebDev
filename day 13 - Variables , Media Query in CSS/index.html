@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables, Media Query</title>
+    <style>
+        @media only screen and (max-width:455px) {
+            body {
+                background-color: green;
+            }
+            .boxes {
+                display: flex;
+            }
+            .box {
+                width: 344px;
+                height: 344px;
+                background-color: antiquewhite;
+                padding: 3px;
+                margin: 3px;
+            }
+        }
+        /*@media not|only mediatype and (expressions) {
+            CSS-Code;
+        }
+        */
+        :root {
+            --color:crimson;
+            --seccolor:rgb(65, 65, 79);/*--global variable */
+            --thirdcolor:violet;
+            --defpad: 25px;
+            --defopacity : 0.7;
+        }
+        div h1 {
+            background-color: var(--color);
+            text-align: center;
+
+        }
+        body {
+            color: azure;
+            background-color: dodgerblue;
+        }
+        .container {
+            background-color: var(--seccolor);
+        }
+        ul li {
+            opacity: var(--defopacity);
+            list-style-type: none;
+            padding: var(--defpad);
+        }
+        ul li:first-child {
+            --color: orange;
+            background-color: var(--color); /*local variable*/
+
+        }
+        ul {
+            display: flex;
+            background-color: var(--thirdcolor);
+        }
+    </style>
+</head>
+<body>
+    <div><h1><u>CSS Variables</u></h1>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li> 
+        </ul>
+    </div>
+    <div class="container">
+        <p>There are 2 types of variables in css:- Global and Local Variables; They are used to hold many properties</p>
+    </div>
+    <div><h1><u>Media Query</u></h1>
+    <p>Used to provide responsiveness in the website</p></div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box model</title>
+    <style>
+        body{
+            background-color: rgb(205, 175, 100);
+        }
+        .box{
+            background-color: lightblue;
+        }
+        .box1{
+            color:indigo;
+            padding : 10px;
+            margin: 25px;
+            border : 2px solid black;
+            height : 200px;
+            box-sizing: border-box;
+        }
+        .box2{
+            color: tomato;
+            padding : 10px;
+            margin: 25px;
+            border : 2px solid black;
+            height : 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color:indianred; text-align: center;">CSS Box Model</h1>
+    <div class="box box1">
+        Four main parts of css box model are :
+        <ol>
+            <li>content</li>
+            <li>padding</li>
+            <li>border</li>
+            <li>margin</li>
+        </ol>
+    </div>
+    <div class="box box2">
+        <ol>
+            <li>After giving padding the text is shifted by 10px from all sides</li>
+            <li>Margins are used to create space around elements, outside of any defined borders.</li>
+            <li>Border adds a border of desired length.</li>
+            <li>Box-sizing border box assigns the total height or width - is the total of  content + border + padding </li>
+            <li> The concept of margin collspse says that if margin of two elements are collapsing the margin of greatest element will be applied once.</li>
+        </ol>
+    </div>
+    <div class="box" style="color:darkolivegreen;">
+        <h4>To calculate the total width and height of an element :</h4>
+        <ul>
+            <li>Total Width: Width + left border + right border + left margin + right margin + left padding + right padding</li>
+            <li>Total Height: Height + bottom border + top border + top padding + bottom padding + top margin + bottom margin</li>
+        </ul>
+    </div>
+</body>
+</html>

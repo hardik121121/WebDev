@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists using CSS, CSS Overflow, Position Property in CSS
+    </title>
+    <style>
+        nav ul li {
+            list-style: devanagari;
+            list-style-position: inside;
+            list-style-type: "❤️";
+            background-color: cyan;
+            border: 2px solid black;
+            /* list-style-image:url ("http://www.jamiesale-cartoonist.com/wp-content/uploads/cartoon-monkey-free.png"); */
+        }
+
+        body {
+            background-color: dimgrey;
+            color: azure;
+        }
+
+        .box {
+            width: 30vw;
+            height: 10 vh;
+            border: 2px solid black;
+            overflow: auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            /* overflow-x: hidden;
+            overflow-y:scroll; */
+        }
+
+        .pos {
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+
+        }
+
+        .box1 {
+            background-color: antiquewhite;
+            position: absolute;
+            z-index: 1;
+            /* top: 8px;
+            left: 144px; */
+        }
+
+        .box2 {
+            background-color: aquamarine;
+            position: relative;
+            top: 34px;
+            left: 56px;
+            z-index: 1;
+
+        }
+
+        .box3 {
+            background-color: darkgoldenrod;
+
+        }
+
+        .box4 {
+            background-color: coral;
+        }
+        .parent {
+            padding: 43px;
+            margin: 34px;
+            border: 3px solid violet;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="background-color: darkkhaki; text-align: center;"><u>Styling Lists using CSS</u></h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="box">
+        <h1 style="background-color: deepskyblue; text-align: center;"><u>CSS Overflow</u></h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo similique hic debitis error, dolore et rerum
+        voluptatem illum maiores beatae reiciendis, neque quibusdam, minima dicta nobis enim earum magnam accusamus
+        officiis odio voluptas optio numquam temporibus! Neque voluptatum voluptas culpa iste veritatis assumenda?Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Odit aut sint quia expedita quis? Necessitatibus doloribus
+        quod atque dignissimos fugit illo similique fuga nesciunt ipsum vel odio molestias sint nisi debitis, ab
+        consequatur ratione dolorem perspiciatis officia, cumque at incidunt. Hic, in. Repudiandae, eveniet nemo.
+    </div>
+    <h1 style="background-color: crimson; text-align: center;"><u>CSS Position</u></h1>
+</div>
+
+    <p>There are many types of positin :
+    <ul>
+        <li>Static(Default)</li>
+        <li>Absolute</li>
+        <li>Relative</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul>
+    and many more.....
+    </p>
+    <div class="parent">
+        <div class="pos box1"></div>
+        <div class="pos box2"></div>
+        <div class="pos box3"></div>
+        <div class="pos box4"></div>
+    </div>
+    
+
+</body>
+
+</html>

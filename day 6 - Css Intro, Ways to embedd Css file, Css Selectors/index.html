@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS, Ways to Embedd Css file, Css Selectors</title>
+    <style>
+        /* Element  Selector*/
+        div {
+            color: aliceblue;
+        }
+        body {
+            background-color: rgb(152, 146, 109);
+        }
+        /*Class Selector*/
+        .special {
+            background-color: mediumseagreen;
+        }
+        /*Id Selector*/
+        #special2 {
+            background-color: cornflowerblue;
+        }
+        /*Child Selector*/             /*Note : Direct child should be present. */
+        div > h5 {
+            background-color: cadetblue;
+            color: azure;
+        }
+        /*Descendent Selector*/      /*Solution of not having a direct child relationship. */
+        div h4{
+            background-color:hotpink;
+            color: azure;
+        }
+        /*Universal Selector        Applies changes to all elements. 
+        * {
+             margin: ;
+            padding: ; 
+        }*/
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1 style="background-color: coral; text-align: center;"><u>Introduction to CSS(Cascading Style Sheets)</u></h1>
+        <br>
+        <p style="font-size: large;">Html is used to define skeleton of a webpage whereas, CSS can be embedded in a html
+            file and can also be made an external file for styling the websites.</p>
+    </div>
+    <div>
+        <h2 style="background-color: indianred; text-align: center;">How can a css file be embedded in html?</h2>
+        <p>There are 3 ways to embedd a css into html file:</p>
+        <ol>
+            <li>Inline Css</li>
+            <li>External Css</li>
+            <li>Internal Css</li>
+        </ol>
+    </div>
+        <span>
+            <ul>
+                <li>Inline Css refers to writing style attribute in every individual element as per requirement but is not considered a good practice because individually a programmer will have to alter changes in different sections of the html file in order to get the work done. </li><br>
+                <li>Internal Css refers to writing style tag in the head section of html file and performing changes in the selector and property-value pair of the tags as per requirement.</li><br>
+                <li>External Css refers to creating an extternal css file and linking it to the hmtl file eith the help of link tag by providing relation as stylesheet and hyper-reference as the css file name.</li>
+            </ul>
+        </span>
+        <div>
+            <h1 style="background-color: crimson; text-align: center;">Css Selectors</h1>
+        </div>
+        <div class="special">
+            <p>There are five commonly used types of selectors in css:
+               <ol>
+                <li>Element Selector</li>
+                <li>Class Selector</li>
+                <li>Id Selector</li>
+                <li>Child Selector</li>
+                <li>Universal Selector</li>
+               </ol>
+            </p>
+        </div>
+        <div id="special2">
+            <p>/*  This is an example of Id Selector</p>
+        </div>
+        <div>
+            <h5>/*  This is an example of child selector</h5>
+        </div>
+        <div>
+            <article>
+            <h4>/*  This is an example of child selector</h4>
+        </article>
+        </div>
+</body>
+
+</html>

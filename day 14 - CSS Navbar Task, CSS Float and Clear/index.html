@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Color Website, CSS Float and Clear</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+         
+        :root {
+            --primary-color:cornflowerblue;
+            --text-color:white;
+            --secondary-color:lavender;
+        }
+        * {
+            padding: 0;
+            margin: 0%;
+            font-family: "Poppins", sans-serif;
+        }
+
+        ul {
+            font-size: larger;
+        }
+
+        nav {
+
+            padding: 35px 0;
+            background-color: var(--primary-color);
+        }
+
+        ul li {
+            padding: 23px;
+            display: inline;
+            list-style: none;
+            color: azure;
+        }
+
+        div {
+            background-color: crimson;
+            text-align: center;
+        }
+
+        body {
+            background-color: var(--secondary-color)
+        }
+        .card {
+            border: 2px solid black;
+            display: flow-root;
+        }
+        .cards {
+            border: 2px solid cadetblue;
+        }
+        div h1{
+            background-color: azure;
+        }
+         img {
+            float: left;
+        }
+        .card :nth-child(5) {
+            clear:left
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--Design a nav bar create a stylesheet make global variables and change contrast of thta website according to navbar.-->
+    <div>
+        <h2><u>NavBar Task</u></h2>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contact us</li>
+                <li>About</li>
+                <li>Services</li>
+            </ul>
+        </nav>
+    </header>
+
+  <div class="card">
+     <h1><u>CSS Float and Clear</u></h1>
+     <img src="https://tse1.mm.bing.net/th?id=OIP.roeJGz3eeyhxK3XRQ0LxpQHaFj&pid=Api" alt="load error" width ="180px">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique deleniti animi delectus dolorum ipsa est, rerum et molestias minima fugiat ea non, itaque a doloribus ad sit. Atque, ut. Nostrum cum quos veniam, eius aperiam sapiente minus vel hic, inventore velit est?</p>
+    <div class="cards">Card1</div>
+    <div class="cards">Card2</div>
+    <div class="cards">Card3</div>
+  </div>
+</body>
+
+</html>

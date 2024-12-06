@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property, Shadows and Outlines</title>
+    <style>
+        /* * {
+            margin: 0%;
+            padding: 0;
+        }  */
+        .box {
+            border: 2px solid floralwhite;
+            display: inline-block;
+            padding: 45px;
+            margin: 34px;
+
+        }
+        body {
+            background-color:darkslateblue;
+            color: azure;
+        }
+        .box2 {
+            border: 2px solid black;
+            padding: 45px;
+            box-shadow: 5px 5px 15px 15px cornsilk ;
+
+        }
+        .text-element {
+            text-shadow: 5px 3px 7px coral ;
+        }
+        .out {
+            outline: 5px rgb(17, 18, 17) dotted;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div><h1 style="text-align: center; background-color:darksalmon;"><u>CSS Display Property</u></h1></div>
+    <div class = "box">This is a box</div>
+    <div class = "box">Also a nice box</div>
+    <span>I am a good boy</span>
+    <span>Also a bad boy</span>
+    <div>
+        <h1 style="text-align: center; background-color: darkgrey;"><u>CSS Shadows and Outlines</u> </h1>
+    </div>
+    <div class="box2">I am a box</div>
+    <div style="padding: 34px;"><h3><u>Shadow Syntax:- </u></h3><br>
+        <h4>h-offset v-offset blur spread color inset;</h4>Here;<br>
+    <ul>
+        <li>h-offset and v-offset: Determines the shadow's horizontal and vertical position</li>
+        <li>blur: The larger the value, the blurrier the shadow</li>
+        <li>spread: Exparids or shrinks the shadow size</li>
+        <li>color: Defines the shadow color</li>
+        <li>insert: Makes the shadow inner</li>
+    </ul></div>
+    <div class="text-element">Shadows can be applied to both boxes and texts- This is an example of text shadow.</div><br>
+    <div class="out"><h3>Outlines Syntax:-</h3></div>
+    <h4>outline : width style color;</h4>
+    <ul>
+        <li>width- Sets outline width</li>
+        <li>style- Determines the style of the outline such as solid,dottedor dashed.</li>
+        <li>color-Sets the outline color</li>
+    </ul>
+</body>
+
+</html>

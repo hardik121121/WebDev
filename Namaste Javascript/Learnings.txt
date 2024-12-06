@@ -1,0 +1,1528 @@
+## (To print anything on the console):-
+
+console.log("I love JavaScript");
+
+## (To combine html with js and display it on browser):-
+
+<script src = "name.js"></script>
+
+## Variables in JS: (Variables are containers for data)
+
+Syntax:- variable_name = value;
+
+eg:- age = 24;
+    name = "Tony Stark";
+    age = 24;
+    price = 99.99;
+    is_Follow = false;
+
+ (Note :- Special value in js is:-"null and undefined")
+
+ x = null;
+ y = undefined;   
+
+ ## (Javsacript is a dynamically typed language.)
+
+ eg:- Full_name = "Tony Stark"; (Before)
+      Full_name = 25; (After)
+
+## (Variable Rules:-)
+
+1. Variable names are case sensitive 'a' != 'A'.
+
+2. Only letters, digits, underscore(_), and dollarsign($) is allowed (not even space).4
+
+3. Only a letter, underscore(_), or dollarsign($) is valid for variable convention starting.
+
+4. Reserved words cannot be variable names.
+
+(Note:- Camel Casing is best eg:- fullName)
+
+## (While defining a Variable(let, const & var)):-
+
+1. var:- Variable can be re-declared & updated. A global scope.(Don't use)
+
+2. let: Variable cannot be re-declared but can be updated. A block scope.(Always use)
+
+3. const: Variable cannot be re-declared or updated. A block scope variable.(Can be used in case of constant's)
+
+(Note:- Always use keyword while defining variable, don't do directly)
+
+eg:- let fullName = "Tony Stark";
+    let age = 24;
+    let totalPrice = 1000;
+
+(Note:- If we simply write let a; and then we try to console.log(a); it gives ans undefined)
+(Note:- Above line is not valid in case of const it gives error "missing initializer")
+
+(Note:- Remember that let and cost have block scope only)
+
+eg:- {
+    let a = 5;
+    console.log(a);
+    // i cannot again declare a here again i have to use new block then
+}
+
+{
+    let a = 10;
+    console.log(a);
+}
+
+## (Datatypes in JS):-
+
+(Note:-  to see dataype of a declared variable in JS):-
+
+Syntax:- typeof(Variable_name);
+
+1. Primitive Datatypes(fixed):-
+
+Number, String, Boolean, Undefined, Null, BigInt, Symbol
+
+eg:- let age1 = 24;
+//number datatype
+
+typeof (age1);
+
+let fullName = "Tony Stark";
+//string dataype
+
+let isFollow = true;
+//Boolean defined
+
+let v;
+//undefined
+
+let m = null;
+//null 
+//Note type of null is object but considered primitive
+
+let u = BigInt("124");
+//BigInt
+
+let i = Symbol("Hello");
+//Symbol
+
+
+2. Non-Primitive Datatypes(User-defined):-
+
+Objects - Arrays , Functions
+
+(Note:- Object is a collection of values)
+
+eg:- Students:
+        name : String
+        age : number
+        marks : number
+        isPass : true
+
+(Note:- Objects store "key: value" pairs)
+
+#(Object declaration):-
+
+      Syntax:-    const Object_Name = {
+                      Variable_Namel : Variable_Value",
+                      Variable_Name2 : Variable_Value",
+                      Variable_Name3 : Variable_Value"
+                    };
+
+eg:-  const student = {
+    fullName : "Rahul Kumar",
+    age : 20,
+    cgpa : 8.2,
+    isPass : true
+};
+//Object
+
+(Note:- In case we want to access single value of an object / To access keys:)
+
+ Syntax1:-  Object_Name["Variable_Name"]
+
+ eg:-    student["fullName"]
+
+ Syntax2:- Object_Name.Variable_Name
+
+ eg:-   student.age
+
+# (Note:- To assign new values to pre-exsisting variables in objects):-
+
+ Syntax:-   // To assign new value to objects
+        
+        Object_Name["Variable_Name"] = Object_Name["Variable_Name"] + Value;
+
+eg:-    student["age"] = student["age"] + 1;
+        
+        student["fullName"] = "Rahul Sharma";
+
+(Note:- Object keys can be changed though object being constant)
+
+## Practice Q1. Create a const object called "product" to store information shown in picture
+
+Solution:-  const PEN = {
+              penName : "Parker Jotter Standard",
+              type : "Ball Pen",
+              color : "Black",
+              rating : "4 star by 7002 people",
+              comesIn : "Deal of the day",
+              currentPrice : "$270",
+              mrp : "$285",
+              discountPercentage : 5
+           };
+
+## Practice Q2.  Create a const object called "profile" to store information shown in picture:-
+
+Solution:-   const PROFILE = {
+              userName : "shradhakhapra",
+              posts : 195,
+              followers : "569k",
+              following : 4,
+              name : "Shradha Khapra",
+              threads : "@shradhakhapra",
+              occupation : "Entrepreneur",
+              companyName : "Apna College",
+              exCompany : "Ex-Microsoft,DRDO",
+              oneLiner : "To educate someone is the highest privilege"
+           };
+
+## (Operators and Conditional Statements):- 
+
+# Comments in JS:-
+
+// This is a single line comment 
+
+/*This is a multi-line
+   comment*/
+
+
+# Operators in JS:-   (expression:  a + b) Here a and b are operands whereas + is a operator 
+
+Used to perform some operation on data.
+
+(Arithmetic Operators):-
+
++,-,*,/,%,exponentiation,increment,decrement
+
+let a = 5;
+let b = 2;
+
+console.log("a = ",a, "& b = ", b);  //5  //2
+console.log("a + b"); // a + b
+console.log("a + b = "); // a + b =
+console.log("a + b = ", a + b); //7
+console.log("a - b = ", a - b); //6
+console.log("a * b = ", a * b);//10
+console.log("a / b = ", a / b);//2.5
+console.log("a % b = ", a % b);//1
+console.log("a ** b = ", a ** b);//25
+
+//single operand aritnmetic operator(unary):-
+
+//increment and decrement
+
+a = a + 1;
+console.log("a = ",a);  //6
+
+a = a - 1;
+console.log("a = ",a);  //5
+
+console.log("a++ = ",a++);  //5
+console.log("++a = ",++a);  //7
+console.log("a-- = ",a--);  //7
+console.log("--a = ",--a);  //5
+
+//Assignment Operators:- =, +=, -=, *=, %=, **=
+
+
+let x = 7;
+let y = 8;
+
+//The value of right is assigned to left
+
+x = y; // x = 8
+console.log(x);
+
+x += 4; // x = x + 4;
+console.log("x += ", x); //12
+
+x -= 4; // x = x - 4
+console.log("x -= ", x); //8
+
+x *= 2; // x = x * 2
+console.log("x *= ", x);//16 
+
+x %= 2; // x = x%2
+console.log("x %= ", x); //0
+
+y **= 3;
+console.log("y **= ", y); //512
+
+
+
+//Comparison operators in JS:- >, >=, <, <= (USed to Compare two values)
+
+// == Equal to
+
+// === Equal to & type
+
+// != Not equal to
+
+// !== Not equal to & type
+
+let w = 6;
+let o = 5;
+let z = "6"; //string - > number
+
+console.log("6 == 5",w==o); //false
+console.log("6 != 5",w!=o); //true
+
+console.log("w == z",w==z); //true
+//Here string is automatically converted to number and then matched
+
+// But in some cases we don't want that string be equally compared to number
+//Therefore  we use striccter version of equal to or not equal to
+// === OR !==(strict version - checks value as well as datatype)
+
+console.log(" w === z =", w===z); //false
+console.log(" w !== z =", w!==z); //true
+
+console.log("w > o =",w>o);//true
+console.log("w < o =",w<o);//false
+console.log("w >= o =",w>=o);//true
+console.log("w <= o =",w<=o);//false
+
+
+//Logical Operators in JS:- (Used to evaluate multiple expressions together)
+
+//Logical AND &&
+
+//Logical OR ||
+
+//Logical NOT !
+
+//Note:- Logical operators always give ans in true or false 
+
+//Logical AND:- (Gives true if both condition 1 and condition 2 are true)
+
+let g = 6;
+let f = 5;
+
+let condition1 = g > f;//true
+let condition2 = g === 6; //true
+let condition3 = g === 5; //false
+console.log("condition1 && condition2 =", condition1 && condition2); //true
+console.log("condition1 && condition3 =", condition1 && condition3); //false
+
+//Logical OR(Gives true if any one condition is true):
+
+console.log("condition || condition =", g < f || g ===6); //true
+
+//Logical NOT(Reverses the answer of given expression):
+
+console.log("!(g<f)=", !(g<f)); //false => true
+
+//Conditional Statemets (To implement some condition in the code):
+
+//if statement example:
+
+let  mode = "dark"
+let color;
+ if(mode === "dark"){
+    color = "black";
+   }
+   if(mode === "light"){
+      color = "white";
+   }
+console.log("color =", color);
+ 
+let age = 25;
+if(age >= 18){
+   console.log("You can vote")
+}
+if(age < 18){
+   console.log("You cannot vote")
+}
+
+//if-elese statement:
+
+mode = "white";
+
+if(mode === "dark"){
+   color = "black";
+  }
+  else{
+     color = "white";
+  }
+console.log("color =", color);
+
+age = 16;
+
+if(age >= 18){
+   console.log("You can vote")
+}
+else{
+   console.log("You cannot vote")
+}
+
+//Note: else cannot be written without if
+
+//Example: Find if a given no. is odd or even
+
+let number = 8;
+let answer;
+
+if(number%2==0){
+   answer = "even";
+}else {
+   answer = "odd";
+}
+
+console.log("answer =", answer);
+
+// else-if Statement:
+
+if(age < 18){
+   console.log("junior");
+}else if(age > 60){
+   console.log("senior");
+}else{
+   console.log("middle")
+}
+
+let mode2 = "dark";
+let color2;
+
+if(mode2 === "dark"){
+   color2 = "black";
+}else if(mode2 == "blue"){
+   color2 = "blue";
+}else if(mode2 === "pink"){
+   color2 = "pink";
+}else {
+   color2 = "white";
+}
+
+console.log(color2);
+if(mode2 === "dark"){
+   console.log(mode2);
+} 
+
+//Ternary Operators in JS:-(Special Operator because it works on three operands):
+
+//Sysntax:  condition? true output : false output
+
+age = 25;
+let result = age > 18 ? "adult" : "minor";
+console.log(result);
+
+age <= 18 ? console.log("adult") : console.log("not adult");
+
+//Switch case for condition checking: eg:-
+
+const expr = 'Papayas';
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+
+## Practice Q1. Get user to input a number using prompt("Enter a number:"). Check if the number is a multiple of 5 or not.:-
+
+Solution:-  
+  
+ let number =  prompt("Enter a number:");
+  if(number%5===0){
+   console.log(number, "is a multiple of 5");
+  }else {
+   console.log(number, "is not a multiple of 5");
+}
+
+## Practice Q2. Write a code which can give grades to students according to their scores:
+
+ Given:- 90-100 = A
+ Given:- 70-89 =  B
+ Given:- 60-69 =  C
+ Given:- 50-59 =  D
+ Given:- 0-49 =   F
+
+ Solution:-   const number = 64;
+              if(number>=90 && number<=100){
+               console.log("A grade");
+              }else if(number>= 70 && number<=89){
+               console.log("B grade");
+              }else if(number>= 60 && number<=69){
+               console.log("C grade");
+              }else if(number>= 50 && number<=59){
+               console.log("D grade");
+              }else{
+               console.log("F grade");
+              }
+
+## Loops and Strings in JS:-(USed to execute a piece of code again and again):-
+
+# (For Loop):-
+
+Syntax:-
+
+for(let i = 1; i <= 5; i++){
+   console.log("Hardik");
+}
+
+//Calculate sum of 1 to n:-
+let sum  = 0;
+let n = prompt("Enter a number");
+for(let i = 1; i <= n; i++){
+   sum = sum + i;
+}
+console.log("sum of",n,"natural no.'s is = ", sum);
+
+# (while loop):-(condition check at start)
+
+ Syntax:- while(condition){
+  // do some works
+  updation
+}
+
+eg:- let j =1;
+while(j<=5){
+  console.log(j);
+  j++;
+}
+
+
+#(do while loop):-(condition check at last = so code will run atleast once)
+
+Syntax:- do{
+   //some work
+   updation;
+}while(condition);
+
+eg:- let k = 1;
+do{
+   console.log(k)
+   k++;
+}while(k<1);
+
+#(For-off loop):-(help to iterate loops over some special datatypes like arrays and strings):-
+
+Syntax:- for(let val of strVar){
+   //do some work
+}
+eg:- let str = "Hardik"
+ for(let i of str){
+   console.log(i);
+}
+
+//To calculate length of string:-
+
+let str1 = "JavaScript";
+let length = 0;
+for(let val in str1){
+    length++;
+}
+console.log(length);
+
+#(For-in loop):-(help to iterate loops over some special datatypes like objects and arrays):-
+
+Syntax:- for(let key in objVar){
+   //do some work
+}
+eg:- let student = {
+    name : "Rahul Kumar",
+    age : 20,
+    cgpa : 7.5,
+    isPass : true
+};
+
+for (let key in student){
+    console.log("key=",key, "value=", student[key]);
+}
+
+//Note :- For-in loop returns key of an object annd once we have key we can calculate values easily
+
+##Practice Q1. Print all even no from 0 to 100:-
+
+for(let i = 0; i <= 100; i++){
+   if(i%2 === 0){
+      console.log(i);
+   }
+}
+
+##Practice Q2. Print all odd no from 0 to 100:-
+
+for(let i = 0; i <= 100; i++){
+   if(i%2 !== 0){
+      console.log(i);
+   }
+}
+
+## Practice Q3. Create a game where you start with any random game number. Ask the user  to keep guessing the game number until the user enters correct value:-
+
+let numValue = 8;
+let num = prompt("Enter a number between 1 to 10:");
+while(num != numValue){
+   num = prompt("OOp's your guess is wrong plz retry:");
+}
+prompt("Congratulations your guess is right :", num);
+
+## Strings in JS:- (String is a sequence of characters used to represent text)
+
+//Create String:- 
+
+let str = "Apna College"
+
+// String length:-
+
+str.length
+
+// String indices
+
+str[0], str[1], str[2]
+
+// To access indices
+console.log(str3[0]);
+
+## Template literals in JS:-(A way to have embeded expressions in strings):
+
+//It is a special type of string create in the form of backticks
+
+let sentence =  `This is a template literal`
+console.log(typeof sentence)
+
+//Why use backticks:-
+
+eg:-
+
+let obj = {
+   item : "pen",
+   price : 10
+};
+
+console.log("the cost of",obj.item, "is". obj.price, "rupees");
+
+//Better way :_ (combine in a single string by template literal)
+
+let output = `the cost of ${obj.item} is ${obj.price} rupees`;
+
+# String interpolation in template literals:-
+//To create strings by doing substitution of placeholders
+
+`string texxt ${expression} string text`
+
+# Escape characters:-
+
+//1. \n - next line in string
+
+//2. \t - to give tab spaces in string
+
+console.log("Apna\tCollege");
+
+## String Methods in JS:-(These are built-in functions in js to manipulate a string):-
+
+//1. str.to UpperCase();
+let newStr = "Apna College hai"
+newStr = newStr.toUpperCase();
+console.log(newStr);
+
+//2. str.toLowerCase();
+newStr = newStr.toLowerCase();
+console.log(newStr);
+
+//3. str.trim() = removes whitespaces
+newStr = newStr.trim();
+console.log(newStr);
+
+//4. str.slice() = returns part of string
+newStr = newStr.slice(0,5);
+console.log(newStr);
+
+//5. str1.concat(str2);
+newStr = newStr.concat(str);
+console.log(newStr);
+//or newStr = newStr + str; is also concatination
+
+//6. str.replace(searchVal, newVal)
+newStr = newStr.replace("apna", "uska");
+console.log(newStr);
+
+//7. str.charAt(index) 
+newStr = newStr.charAt(3);
+console.log(newStr);
+
+//Note :- Strings are immutable in js
+
+## Practice Q1. Prompt the user to enter their full name . Generate a username for them based on the input.
+                Start username with @, followed by their full name and ending with the full name length
+
+                eg:- user name = "shradhakhapra", username should be "@shradhakhapra11"
+            
+Solution:- 
+
+let fullname = prompt("Enter your full name withot spaces");
+console.log(fullname);
+let username = "@" + fullname;
+let length1 = fullname.length;
+username = username + length1;
+console.log(username);
+
+## Arrays in JS:-(Collection of items):
+
+//Arrays in JS:-(Collection of items):
+
+//Create Arrays:
+
+let heroes = ["ironman", "hulk", "thor", "batman", "antman"];
+
+let marks = [96, 75, 48, 83, 66];
+console.log(marks);
+
+let info = ["rahul", 86, "Delhi"];
+
+//Arrays can have different dtype value in JS but usually it is preffered to keep same dtype value in an array
+
+//To print array length:
+console.log(marks.length);
+
+console.log(heroes);
+
+//Note : Array is a special type of object which has index : value pair
+
+//Array Indices:- (Values stored in linear fashion)
+
+//arr[0], arr[1], arr[2]......
+
+console.log(marks[0]);
+console.log(marks[1]);
+console.log(marks[2]);
+console.log(marks[3]);
+console.log(marks[4]);
+
+//If we try to print index that doesn't exist we get :-  undefined
+console.log(marks[6]); //-undefined 
+
+//Arrays are mutable but not strings :- 
+//eg:-let marks = [96, 75, 48, 83, 66];
+marks[0] = 66;
+console.log(marks); //[66, 75, 48, 83, 66];
+
+//Looping over an array:-
+heroes = ["ironman", "hulk", "thor", "batman", "antman", "Black-Panther"];
+
+//for loop: length(property)
+for(let index = 0; index < heroes.length; index++){
+    console.log(heroes[index]);
+}
+
+//Prefferred - for-of loop:-
+
+for(let elements of heroes){
+    console.log(elements);
+}
+
+let cities = ["delhi", "pune", "mumbai", "hyderabad", "gurgaon"];
+
+for(let city in cities){
+    console.log(city);
+}
+
+//Practice Q1. For a given marks with marks of students -> [85, 97, 44, 37, 76, 60]. Find the average marks of entire class:
+
+let students1 = [85, 97, 44, 37, 76, 60];
+let sum = 0;
+for(let i of students1){
+    sum = sum + i; 
+}
+let average = sum/students1.length;
+console.log(`avg marks of the class = ${average}`);
+
+//For a given array with prices of 5 items -> [250, 645, 300, 900, 50]
+//All items have an offer of 10% OFF on them. Change the array to store final price after applying call
+
+let prices = [250, 645, 300, 900, 50];
+
+let index = 0;
+for(let price of prices){
+    let offer = price / 10;
+    prices[index] = prices[index] - offer;
+   index++;
+}
+console.log(`price after discount is ${prices}`);
+//Note - For-Of loop cannot be used here because it accesses value not index directly
+//So it can be done by indirect usage:
+
+//Alternative way of solving above question by using for loop:
+for(let i = 0; i < prices.length; i++){
+   let  offer1 = prices[i] / 10;
+   prices[i] -= offer1;  
+}
+console.log(prices);
+
+//Array Methods:
+
+let veggies = ["potatao", "onion", "tomato", "cauliflower", "brinjal"];
+
+//1. Push() - add to end
+
+veggies.push("Brinjal");
+
+//makes changes in original array
+
+//can also be used to add multiple items together
+
+veggies.push("bottleguard", "carrot", "raddish");
+
+console.log(veggies);
+
+//2. Pop() - delete from end & return
+let DeletedValue = veggies.pop();
+//makes changes in original array
+
+console.log(veggies);
+
+//we can also printed value deleted by pop
+console.log(DeletedValue);
+
+
+//3. toString() - converts array to String
+console.log(veggies.toString());
+//original array remains untouched
+
+//4. concat() - joins multiple arrays & returns the result
+
+let marvelHeroes = ["thor", "spiderman", "ironman"];
+let dcHeroes = ["batman", "superman", "aquaman"];
+
+let allHeroes = marvelHeroes.concat(dcHeroes);
+
+console.log(allHeroes);
+// do's work in new array without changing actual array
+
+//5.unshift() - add element to start 
+
+marvelHeroes.unshift("BlackWidow");
+console.log(marvelHeroes);
+
+//6. shift() - remove element start
+
+let val = marvelHeroes.shift();
+
+console.log("deleted", val);
+
+//changes are performed in original array
+
+//7. slice() - returns a piece of the array
+
+//ending index is non-inclusive
+
+console.log(allHeroes.slice(1,3));
+
+// no changes are performed in original array
+
+//8. splice() - change original array(add, remove replace)
+
+//Here changes are performed in original array
+
+//Syntax:- splice(startidx, delCount, newE(1...))
+let numbers = [1,2,3,4,5,6,7];
+
+//splice(2,2,101,102)
+
+// after this final array will look like:- 
+
+//[1,2,101,102,5,6,7]
+
+//splicing 2 se chaalu krni h or ek element delete krna h and konse new elements add krne h usi index pe jisse deleting ki h) 
+
+numbers.splice(2,2,101,102);
+
+console.log(numbers);
+//output:- [1,2,101,102,5,6,7]
+
+//Suppose if we don't want to delete but only add elemets:
+numbers.splice(2,0,105);
+console.log(numbers);
+
+//Suppose we only want to delete a element:
+numbers.splice(3,1);
+console.log(numbers); //101 will be deleted
+
+//Suppose if we only want to replace a element:
+numbers.splice(3,1,105);
+console.log(numbers);
+
+//If we only pass a single value it acts like slice : meaning it will return only the elements present in that array after that passed index
+numbers.splice(4); // meaning 4 waale index se aage ke saare elements delete krdo
+console.log(numbers);
+
+//If we dont pass any index , no element is deleted:
+numbers.splice();
+console.log(numbers);
+
+// Practice Q1. Create an array to store companies -> "Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"
+//a. Remove the first company from the array
+//b. Remove Uber & add ola in its place
+//c. add amazon at the end
+
+let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+
+console.log("removed company = ", companies.shift());
+console.log(companies); // ["Microsoft", "Uber", "Google", "IBM", "Netflix"]
+
+companies.splice(1,1,"Ola");
+console.log(companies); // ["Microsoft", "Uber", "Google", "IBM", "Netflix"]
+
+companies.push("Amazon");
+console.log(companies); // ["Microsoft", "Uber", "Google", "IBM", "Netflix", "Amazon"]
+
+## Functions in JS:- 
+
+// Functions in JS:- (Block of code that performs a specific task , can be invoked whenever needed)
+//eg:- .log(), .toUpperCase(), .push()
+
+//Fuction Definition:-
+
+// function functionName(){
+     // do some work
+// }
+
+//  function functionName(param1, param2...){
+     //do some work
+//  }
+
+//Function Call:-
+
+//functionName();
+
+function myFunction(){
+     console.log("Welcome to my learnings");
+     console.log("I am learning JS");
+}
+myFunction();
+
+//Use of functions - To prevent redundancy from code
+
+//variable in function definition is perimeter
+function myfunction1(msg){ //parameter->input
+     console.log(msg);
+}
+myfunction1("I love web-d");
+//arguement is the message or variable passed during a function call
+
+//we can also pass multiple variables:
+function myfunction2(msg, val){
+  console.log(msg,val);
+}
+myfunction2("I love web-dev", 100);
+
+//Function to calculate sum of two numbers:
+
+function mySum(val1, val2){
+  console.log(val1 + val2);
+}
+mySum(5,6);
+
+//return keyword can be used to return a value for future use:
+
+function yourSum(val1, val2){
+     //local variable - scope limited
+     finalSum = val1 + val2;
+     return finalSum;
+}
+let value = yourSum(3,4); // this will not print any value due to no console.log() statement but it can be stored in a variable and then be used
+console.log(value);
+
+//Arrow functions =>(Cpmpact way of writting functions):
+
+// const functionName = (param1, param2...) => {
+//      //do some work
+// }
+
+//sum arrow function
+const sum = (a, b) => {
+     console.log(a+b);
+}
+sum(4,4);
+
+//multiplication arrow function
+const mul = (a,b) => {
+     console.log(a*b);
+}
+mul(4,4);
+
+//without parameter arrow function:
+const printHello = () => {
+     console.log("hello");
+}
+printHello();
+
+// Q1. Create a function using the "function" keyword that takes a String as an arguement & returns the numbwr of vowels in the string:
+
+function findVowel(message){
+     let count = 0;
+     for(let val of message){
+          if(val == "A" || val == "E"|| val == "I" || val == "O" || val == "U" || val == "a" || val == "e" || val == "i" || val == "o" || val == "u"){
+              count++;
+          }
+     }
+     return count;
+}
+console.log(findVowel("aEIou")); //5
+
+//Create an arrow function for the same:
+
+const vowel = (message) => {
+     let count = 0;
+     for(let val of message){
+          if(val == "A" || val == "E"|| val == "I" || val == "O" || val == "U" || val == "a" || val == "e" || val == "i" || val == "o" || val == "u"){
+               count++;
+          }     
+     }
+     return count;
+}
+console.log(vowel("AIEOUUUU")); //8
+
+//forEach Loop in Arrays: (method)
+
+//arr.forEach(callBackFunction)
+
+//callBackFunction : Here it is a function to execute for each element in array
+
+//A callback is a function passed as an arguement to another function
+
+// vowel.forEach ((Val) => {
+// console.log(val);
+// })
+
+//eg:-
+
+
+let arr = [1,2,3,4,5];
+
+arr.forEach(function printVal(val){ //arr me se ek-ek krkr value nikalega or use printVal me pass karayega
+console.log(val);
+}) //1,2,3,4,5
+
+
+let cities = ["pune","delhi","agra"];
+cities.forEach(function printCity(city){
+     console.log(city.toUpperCase());
+}) // pune, delhi, agra
+
+//to print value with index:
+
+cities.forEach(function printNameAndVal(city, index){
+ console.log(city, index);
+})
+
+//Note : ForEach method can only be used for arrays and not for strings
+
+//What are higher order functions/methods ?
+
+//They are those functions which use a different function as a parameter or returning function as a value
+//eg: function with callback functions
+
+//Practice Q1. For a given array of numbers, print the square of eachvalue using forEach Loop
+
+let numbers4 = [4,5,6,7];
+
+let calculateSquare = numbers4.forEach((values) => {
+     console.log(values*values);
+});
+// numbers4.forEach(calculateSquare);
+
+//Some more important Array Methods:
+
+//1. Map - Creates a new array with the results of some operation. The value its callback returns are used to form a new array
+//Similar to forEach but returns a new array
+
+// arr.map(callbackFnx(value,index,array))
+
+// eg:- let newArr = arr.map((val) => {
+//     return val*2;
+//})
+
+//using map to print array elements:-
+
+let nums = [65,42,54,34,23];
+
+let newArr = nums.map((val) => { 
+ return val;     
+})
+console.log(newArr);
+
+//2. Filter - Creates a new array of elements that give true for a condition/filter - Array ke har index pe jaake condition ke hisaab se elements ko filter out krna
+//eg: all even elements
+
+//Syntax:- let newArr = arr.filter((val){
+// return val % 2 == 0;
+//})
+
+//Create a number array and filter even numbers:
+
+let latestArr = [2,4,3,5,6,8,7,9];
+
+let ansArr = latestArr.filter((val) => {
+     return val % 2 == 0;
+})
+console.log(ansArr);
+
+//3. Reduce - Performs some operations & reduces the array to a single value. It returns that single value.
+
+//DemoCode:- const array1 = [1,2,3,4];
+             
+             // 0+1+2+3+4
+            // const initialValue = 0;
+            // const sumWithInitial = array1.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue,);
+            // console.log(sumWithInitial);
+            //Expected output : 10
+let arr4 = [1,2,3,4];
+const answer1 = arr4.reduce((result1,currentVal) => {
+     return result1 + currentVal;
+})
+console.log(answer1);
+
+//return greatest element everytime:
+
+const answer2 = arr4.reduce((currentVal,result1) =>{
+     return Math.max(result1,currentVal);
+})
+console.log(answer2);
+
+//Practice Q1. Given an array of students filter out marks of students that scored greater than 90;
+
+let marks1 = [94,46,87,95,62,77,98,56,91,60];
+
+let answerArr = marks1.filter((value) => {
+    return value > 90;
+})
+console.log(answerArr);
+
+//Practice Q2. Take a number n as an input from the user. Create an array
+//of numbers from 1 to n. Use the reduce method to calculate sum of all numbers
+//in an array. Use the reduce method to calculate product of all
+//numbers in the array:
+
+const n = prompt("Enter a number");
+
+let arraay = [];
+for(let i = 1; i <= n; i++){
+     arraay[i-1] = i;
+}
+let answer3 = arraay.reduce((Prebval,currentValue) => {
+     return Prebval + currentValue;
+})
+console.log(answer3);
+
+let answer4 = arraay.reduce((Prebval,currentValue) => {
+     return Prebval * currentValue;
+})
+console.log(answer4);
+
+
+##DOM in JS:-
+//Three musketeers of Web Dev:
+
+//1. HTML(Hyper text Markup Language) - structure
+//2. HTML(Cascading Style Sheets) - styling
+//3. Javascript - logic
+
+// Starter Code:
+
+//1. link - used to link css file
+//2. script - used to link js file
+
+// Pro's of using external js file:
+
+//1. Increases readability
+//2. Promotes modularity
+//3. helps in browser caching
+
+
+// Window Object:
+
+//The window object represents an open window in a browser. It is browser's object (not Javascript's) & is automatically created by the browser
+
+//It is a global object with lots of properties and methods
+
+//console.log() , alert, prompt are a part of window object
+
+console.log("hello");
+window.console.log("hello2");
+
+// What is DOM? - Tree like structure where every node is an object
+
+// Basically all htmml code written in linking with js file,the html elements can be accessed throughout the JS file, wether its paragraph tag, heading tag,
+// div tag or img tag;etc The html code or elemnts automatically come in JS file and convert themself in an object and it is called "Document" and it gets available
+// in window object as a sub-object.
+
+// When a web page is loaded, the browser creates a Document Object Model (DOM) of the page.
+console.log(window.document); //prints all html code in js
+console.log(window.document.body.childNodes[1]);
+
+//Now to see properties of a document:
+console.dir(window.document); // - to print object
+
+// window --> html--> head --> meta, meta, title, link
+            //    \
+            //     \
+            //      > body --> div --> Image, h1, p, div
+            //         \
+            //          \
+            //           > script
+
+// Dom is used to perform dynamic changes(according to user input) in html by JS.
+document.body.style.background = "pink";
+//console.log(window.document.body.childNodes[1].innerText = "abcd");
+
+// Dom Manipulation:-
+ 
+//To access Elements:
+
+//1. Selecting with ID: document.getElementbyId("myId");
+let heading = document.getElementById("heading"); //returns a value  that can be saved in a variable
+console.dir(heading); //id # is unique for each element
+
+heading = document.getElementById("myId"); 
+console.dir(heading);
+// Note: For non-exsisting id it returns null
+
+//2. Selecting with Class: document.getElementsByClassName("my Class")
+let header = document.getElementsByClassName("header");
+console.dir(header); //class . itself can be same for multiple elements
+//returns HTML collection
+
+header = document.getElementById("myClass"); 
+console.dir(header);
+// Note: For non-exsisting class it will return an empty HTML Collection
+
+//Note : Css priority of id is greater than class
+
+//3. Selecting with tags : docyment.getElementByTagNane("p")
+let paras = document.getElementsByTagName("p");
+console.dir(paras);
+
+//4. Query Selector : document.querySelector("myId/myClass/tag") || document.querySelectorAll("myId/myClass/tag")
+let firstElement = document.querySelector("p"); //returns 1st  matching Element
+console.dir(firstElement);
+
+let allElements = document.querySelectorAll("p"); //returns all matching elements
+console.dir(allElements);
+
+firstElement = document.querySelector("#heading"); //returns 1st  matching Element
+console.dir(firstElement);
+
+allElements = document.querySelectorAll("#heading"); //returns all matching elements
+console.dir(allElements);
+
+firstElement = document.querySelector(".header"); //returns 1st  matching Element
+console.dir(firstElement);
+
+allElements = document.querySelectorAll(".header"); //returns all matching elements
+console.dir(allElements);
+//Note : Query Selector returns a Node List.
+
+//Note : For non-exsisting id it returns null and for non-exsistiing class it returns an empty Node List or HTML Collection
+
+// Properties used in navigation:
+
+//1. firstChild
+//2. lastChild
+//3. Children
+
+//Properties to check element value(get) and can also change element value(set):
+
+//1. tagName - returns tag of the first element Node
+console.dir(firstElement.tagName); //h1
+
+//2. innerText - returns the text context only of the element and all its children
+let div = document.querySelector("div");
+console.dir(div.innerText);
+
+// to set the value:
+// div.innerText = "abcd";
+
+//3. innerHTML - returns the plain text as well as HTML contents in the element
+console.dir(div.innerHTML); 
+
+// to set the value:
+//div.innerHTML = "<div> inner div </div> ";
+
+//practical example:
+let heading1 = document.querySelector("h1");
+heading1.innerText = "new-Heading";
+console.dir(heading1);
+
+heading1.innerHTML = "<i>Latest-Heading</i>"; 
+//pro's of innerHTML - can use tags in it
+console.dir(heading1);
+
+//4. textContent - returns textual content even for hidden elements
+let h4 = document.querySelector("h4");
+console.dir(h4.textContent);
+
+//Practice Q1. Create a H2 heading element with text - "Hello Javascript". Append "from Apna College Students" to this text using JS
+
+let t1 = document.querySelector("h2");
+t1.innerText = t1.innerText +  "from Apnna College Students";
+console.dir(t1);
+
+//Practic Q2. Create 3 divs with common class name - "box". Access them & add some unique text to each of them 
+let divs = document.querySelectorAll(".box");
+let index = 1;
+for(div of divs){
+    div.innerText = `new unique value ${index}`;
+    index++;
+}
+console.dir(divs);
+
+## Attributes in DOM Manipulation:
+
+//1. getAttribute(attr) // to get the attribute value:
+
+let div1 = document.querySelector("div");
+console.log(div1);
+
+let id = div1.getAttribute("id");
+console.log(id);
+
+let name = div1.getAttribute("name");
+console.log(name);
+
+let paragraphs = document.querySelector("p");
+console.log(paragraphs.getAttribute("class"));
+
+//2. setAttribute(attr, value) // to set the attribute val th
+console.log(paragraphs.setAttribute("class","my-Paragraphs")) //elements me jaake check kro
+
+//3. Style - to channge style value of an element
+let div2 = document.querySelector("div");
+console.log(div2.style);
+
+div2.style.backgroundColor = "green"; // use camel casing in js
+div2.style.backgroundColor = "purple";
+
+div2.style.fontSize = "26px";
+div2.innerText = "Changed by js styling";
+
+//Attributes to add new Elements:
+
+// Insert Elements:(add)
+
+//1. node.append(el) # adds at the end of the node(inside)
+
+// first create = let el = document.createElement("div");
+// then add = div.append(newBtn); 
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click me";
+console.log(newBtn);
+
+div2 = document.querySelector("div");
+div2.append(newBtn); 
+
+//2. node.prepend(el) #adds at the start of node (inside)
+
+div2.prepend(newBtn);
+
+//3. node.before(el) #adds before the node(outside)
+
+div2.before(newBtn);
+
+//4. node.after(el) # adds after the node(outside)
+
+div2.after(newBtn);
+
+//Attributes to delete created Elements:
+let newHeading = document.createElement("h1");
+newHeading.innerText = "Hi this is a heading";
+console.log(newHeading);
+document.querySelector("body").prepend(newHeading);
+newHeading.before(h4);
+
+// Deleting Elements:(add)
+
+//1. node.remove()
+newHeading = document.querySelector("h1");
+newHeading.remove();
+
+//Some more methods : appendChild(); removeChild();
+
+//Practice Q1. Create a new button element. Give it a text "click me", background color of read & text color of white
+//Insert the element as the first element inside the body tag
+
+let firstBtn = document.createElement("btn");
+firstBtn.innerText = "Click me!";
+firstBtn.style.height = "26px";
+firstBtn.style.width = "26px";
+firstBtn.style.border = " 1px solid black";
+firstBtn.style.backgroundColor = "red";
+firstBtn.style.color = "white";
+document.querySelector("body").prepend(firstBtn);
+
+//Practice Q2. Create a <p> tag in html, give it a class & some styling
+//Now create a new class in CSS and try to append this class to the <p> element
+
+//Did you notice how you overwrite the class name when you add a new one?
+//Solve this problem using class list
+
+let paragraph2 = document.createElement("p");
+paragraph2.innerText = "new Paragraph";
+paragraph2.style.fontSize ="25px";
+paragraph2.style.fontFamily = "Poppins sans-serif";
+paragraph2.style.color = "white";
+paragraph2.style.backgroundColor = "black";
+document.querySelector("body").append(paragraph2);
+paragraph2.classList.add("newClass");
+paragraph2.classList.add("newClass1");
+console.log(paragraph2.classList)
+
+
+## Events in JS:
+
+//Events in JS:
+
+//The change in the state of an object is known as an Event
+//Events are fired to notify code of "interesting changes" that may affect code execution
+
+
+//1. Mouse Events (click, double click etc);
+//2. Keyboard Events (keypress , keyup , keydown)'
+//3. Form Events (submit etc.)
+//4. Print event & many more
+
+//Write in html: (inline handling)
+
+//1. <button onclick="console.log('button was clicked'); alert('hello')">Click me!</button> (command is follwed after clicking the button)
+
+//(Note : if we are using double codes for strings outside then inside will have to be single codes) 
+
+//2. <button ondblclick="console.log('button was clicked 2x');">Click me 2 times!</button> (command is follwed after double clicking the button)
+
+//3. <div onmouseover="console.log('you are inside div')">this is a box</div>
+
+//But  this is not a goow way of handling events by html code will become bulky
+
+//Event Handling in JS: (JS handling) 
+
+//Syntax:-
+
+// Node.event = () =>{
+//     //handle here
+// }
+
+let btn1 = document.querySelector("#btn1");
+// btn1.onclick = () => {
+//     console.log(" button was clicked");
+//     let a = 25;
+//     a++;
+//     console.log(a); //26
+// }; //comment kdia nhi to overwrite hojayega
+let div = document.querySelector("div");
+div.onmouseover = () => {
+    console.log("you are inside div");
+};
+btn1.onclick = () => {
+    console.log("HANDLER1");
+    let a = 25;
+    a++;
+    console.log(a);
+};
+//ye overwride krdega to HANDLER2 print hone lega
+btn1.onclick = () => {
+ console.log("HANDLER2");
+};
+
+// drawback of JS handling : at a time in only one way we can handle events if we do that again over riding will be performed
+
+//Property: JS handling > inline handling
+
+// ##Event Object :
+
+//It is a special object that has details about  the event
+
+//All event handlers have access to the Event Object's properties and methods
+
+//Syntax:-  node.event = (e) => {
+//           //handle here 
+//            }
+// e.target , e.type, e.clientX, e.clientY
+
+btn1.onclick = (e) => { //Here e is the event object
+ console.log(e); //many values and properties of event object will be printed
+  console.log(e.type); //click will be printed indicating thatit is a "onclick" type event.
+  console.log(e.target); //gives html code for the provided event
+  console.log(e.clientX, e.clientY); //gives the distance in x and y direction
+} 
+div = document.querySelector("div");
+div.onmouseover = (e) => {
+  console.log("you are inside hovering div");
+  console.log(e); //many values and properties of event object will be printed
+  console.log(e.type); //mouseover will be printed indicating thatit is a "mouseEvent" type event.
+  console.log(e.target); //gives html code for the provided event
+  console.log(e.clientX, e.clientY); //gives the distance in x and y direction
+};
+
+//## Event Listeners:
+
+// Listens and waits for events and as soon as event comes they perform their respective function
+
+// 1. to add Event Listener:
+
+//node.addEventListener(event,callback);
+
+btn1.addEventListener(onclick, () =>{
+    console.log("button1 was clicked");
+    console.log(e); //many values and properties of event object will be printed
+  console.log(e.type); //mouseover will be printed indicating thatit is a "mouseEvent" type event.
+  console.log(e.target); //gives html code for the provided event
+  console.log(e.clientX, e.clientY); //gives the distance in x and y direction
+});
+
+btn1.addEventListener(onclick, () =>{
+    console.log("button1 was clicked - handler2");
+});
+
+//----Event listers helps us to perform multiple tasks on same events.
+
+// 2. to remove Event Listener:
+
+//node.removeEventListener(event,callback);
+
+btn1.addEventListener(onclick, () =>{
+    console.log("button1 was clicked - handler1");
+});btn1.addEventListener(onclick, () =>{
+    console.log("button1 was clicked - handler2");
+});btn1.addEventListener(onclick, () =>{
+    console.log("button1 was clicked - handler3");
+});btn1.addEventListener(onclick, () =>{
+    console.log("button1 was clicked - handler4");
+});
+
+const handler3 = () => {
+ console.log("button was clickefd - handler3");
+};
+
+btn1.removeEventListener("click", handler3);
+
+// Note: the callback reference should be same to remove
+
+//Create a toggle button that changes the screen to dark-mode when clicked & light-mode when clicked again
+
+let btn2 = document.querySelector("#btn2");
+let mode = "Light";
+btn2.addEventListener("click", () => {
+  if(mode==="Light"){
+    mode = "Dark";
+    document.querySelector("body").style.backgroundColor = "black";
+  }else{
+    mode = "Light";
+    document.querySelector("body").style.backgroundColor = "white";
+  }
+  console.log(mode);
+});
+
+## Classes and Objects in JS:

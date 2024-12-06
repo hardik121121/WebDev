@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzing units</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            /* width: 2048px; */
+            width : 57vw;
+            background-color: aquamarine;
+            box-sizing: border-box;
+            margin: auto;
+            text-align: center;
+            font-size: 2rem;
+        }
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+        h1 {
+            text-align: center;
+            background-color: cornflowerblue;
+            color: azure;
+        }
+        body {
+            background-color:indigo;
+            color: azure;
+        }
+        .container {
+            border: 2px solid black;
+            /* width: 2048px; */
+            width : 57vw;
+            background-color: aquamarine;
+            box-sizing: border-box;
+            margin: auto;
+            height: 28vh;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .mycont {
+            box-sizing: border-box;
+            background-color: cadetblue;
+            color: azure;
+            font-size: 22px;
+            width: 100vmin;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sizzing units in css</h1><br><br>
+    <div class = "box">
+        This is a box.
+    </div>
+    <br><br>
+    <div>
+        <h3>There are several types of units in css :</h3>
+        <ul>
+            <li>px - pixels.</li>
+            <li>vw - viewport-width preffered to make sites dynamically active so that scree and color pixels may not burst when going out of monitor resolution length.</li>
+            <li>vh - to adjust height of container as x% of the height of vw</li>
+            <li>em - unit used to  adjust font size gives x times of inherited or default value i.e. 16px.</li>
+            <li>rem - gives font size as x% of the root size;</li>
+            <li>vmin - Sometimes width is greater than height but in phone height is greater than width; So in phone - vmin is width, but in computer  vmin is height. </li>
+            <li>vmax- almost similar to vmin</li>
+            <li>%  - refers to x% to that of parent.</li>
+            and many more complex units are there.....
+        </ul>
+        <p>margin- auto automatically sets the margin both from left and right  but it is centered only if it is a block level element ; not works in inline element.</p>
+    </div>
+    <span class="box1">
+        Note : margin auto cannot be applied on span and width can't be applied
+    </span>
+    <br>
+    <br>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempore est tempora minus iure quasi voluptatibus deserunt quo unde repellat, aperiam commodi doloribus illo odit reprehenderit dolorum nobis. Vel veritatis nam, quae expedita repudiandae quidem temporibus officia aspernatur hic quia aliquam, molestiae ratione culpa nemo odio consequuntur. Quae vero alias facere ratione, quia asperiores dolores perspiciatis.
+    </div>
+    <br>
+    <br>
+    <div class="mycont">I am another container</div>
+    
+</body>
+</html> 

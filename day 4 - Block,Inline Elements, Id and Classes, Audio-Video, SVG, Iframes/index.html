@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline and Block Elements, Id and Classes, Audio and Video Embedtion.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="background-color: blanchedalmond;">
+        <u>Inline and Block Elements</u>
+    </h1>
+    <p>Hey I am a Block Element(I will colour the whole line and i will take full width)</p>
+    <a href="https://google.com">I am an Inline element(I will colour only the space I want - till text is
+        written) </a>
+    <div>I am a Block element</div>
+
+    <span>Similar to div But Inline element</span>
+    <a href="">yes he is Inline</a><br>
+    <br>
+    <!--Quick Task
+     Without using br tag, write a vertically aligned form asking for 
+     name city and pincode of a user-->
+    <form action="post"><u>Quick Quiz</u></form><br>
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="Username" placeholder="Write ur username here.."></input>
+    </div>
+    <div>
+        <label for="city">City</label>
+        <input type="text" name="city" placeholder="Enter your city here..">
+    </div>
+    </div>
+    <div>
+        <label for="pincode">Pincode</label>
+        <input type="text" name="pincode" placeholder="Enter your city's postal code here..">
+    </div><br><br><br>
+    <h1 style="background-color: beige;">
+        <u>Id And Classes</u>
+    </h1>
+    <p>
+        Id - Unique Identifier(If an id is awarded to an element that id cannot be given to some other element).
+        <br>
+        Class - If you wat to award same id to multiple elements class is used.
+    </p>
+    <div id="firstdiv" class="red bg-yellow">First</div>
+    <div id="Seconddiv" class>Second</div>
+    <span class="red">Inline Elemnt - Span</span><br>
+
+    <p>
+        Note- An element can have multiple classes, classes are given by applying space after the previous class, but no
+        element can have same id.
+    </p>
+    <p>
+        Note - A class is accesed is css by applying "." whwereas an id of an element is accessed in css by using "#"
+    </p><br><br><br>
+
+    <h1 style="background-color: darkcyan;">
+        <u>Audio and Video Elements Embeddtion and SVG</u>
+    </h1>
+    <div>
+        <p>
+            Attributes used in audio and video tags are:-controls, loop, muted, autoplay, poster,width and height, src,
+            preload = none,metadata,auto.
+        </p>
+        <video src="video.mp4" width="255" controls loop muted poster="image.jpeg"></video>
+        <audio src="audio.mp3" controls loop autoplay muted preload="none"></audio>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+    </div>
+
+    <h1 style="background-color: azure;">
+        <u>iframes in html</u>
+    </h1>
+    <div>
+        <p>
+            Used to embedd another websites and youtube videos to our webpage
+        </p>
+        <iframe src="https://www.codewithharry.com/tutorial/html-iframes" height="444" width="122"></iframe>
+    </div>
+</body>
+
+</html>

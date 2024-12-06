@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Task, Specificity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Write html and css code to style a paragraph inside a div which contains 5 other paragraphs. The first paragraph must have background color yellow and text color red. And the other paragraphs must have background color blue and text color  white, And dont change html. -->
+
+<body>
+  <h1 style="background-color: cornflowerblue; text-align: center; color: azure;"><u>CSS First Task</u></h1>
+  <div>
+    <p>Hello I am the first Paragraph!</p>
+
+    <p>Well I am The second paragraph.</p>
+
+    <p>Good to see you guys, I am the third paragraph.</p>
+
+    <p>Ok so I am the fourth paragraph.</p>
+
+    <p>Well I guess I will be the fifth paragraph then.</p>
+  </div>
+  <div>
+    <h2 class = "yellow cred cpurple">Specificity in CSS</h2>
+     <p>To remove conflict issues Css uses "The Cascade Algorithm"; This Algorithm determines that which property will be applied in css and which property won't.</p>
+     <br>
+     <p>Since there are multiple color properties applied in the same element so which property will be winning? </p>
+     <ol><h4>There are 4 rules according to the cascade algorithm :</h4>
+       <li>Position and order of appearance: the order in which your css rules operator.</li>
+       <li>Specificity: an algorithm that determines which css selector has the strongest match.</li>
+       <li>Origin: the orderin which css appears and where it comes from, wether that is a  browser style, css from a browser extension, on your authored css</li>
+      <li>Importance: Some css rules are weighted more heavily than others, especially with the important rule type.</li></ol>
+  </div>
+  
+
+
+</body>
+
+</html>

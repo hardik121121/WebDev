@@ -1,0 +1,1 @@
+alert("Welcome to my Persoonalized Bookmark Manager")

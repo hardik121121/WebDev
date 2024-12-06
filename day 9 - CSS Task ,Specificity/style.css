@@ -1,0 +1,53 @@
+/* Styling for the first paragraph */
+div > p:nth-child(1) {
+    background-color: yellow;
+    color: red;
+}
+
+/* Styling for the second to fifth paragraphs */
+div > p:nth-child(n+2) {
+    background-color:dodgerblue;
+    color:azure;
+}
+body {
+    background-color:coral;
+}
+h2 { /*The specificity of this selector is 1*/
+    background-color: aqua;
+}
+.yellow { /*The specificity of this selector is 10*/
+    background-color: yellow;
+    text-align: center;
+}
+.cred {
+    background-color: red;
+    text-align: center;
+}
+.cpurple {
+    background-color: purple;
+    text-align: center;
+}
+/*The specififcity of this selector is 10*/
+[data-x-a] {
+    color: aquamarine;
+}
+/*The specificity of id selector is 100*/
+/*The specificity of universal selector is 0*/
+/*The specificity of inline styles is 1000 */
+/*To calculate specifitys of complex selectors add their value :
+  h1.yellow {
+    background-color:yellow; The specifity of this has become 10 + 1 = 11.
+  }*/
+  /*If we apply the keyword important the specificity becomes 10000
+  it is almost impossible to overwrite it,
+   p {
+    color : red important; 
+   }*/
+
+   /*Question :
+    What is the specificity of the given block :
+     a.harryclass.rohan-class[href]:hover {
+       color : blueviolet;   
+    }
+    Ans. 1+10+10+10+10 = 41
+   */
